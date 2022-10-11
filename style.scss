@@ -1,6 +1,7 @@
 @import "./sass/normalize";
 @import "./sass/font";
 @import "./sass/variables";
+@import "./sass/mixins";
 
 
 body {
@@ -77,8 +78,7 @@ a {
         font-weight: normal;
     }
 
-    &:hover {
-        background: linear-gradient( $primary-color, $secondary-color);
+    &:hover{
         transform: scale(1.03);
     }
 }
@@ -208,28 +208,44 @@ main {
 }
 
 .main__card_i {
-    position: relative;
     margin-top: 18px;
     margin-right: 20px;
-    font-size: 25px;
-    z-index: 0;
-
-
-    .hidden { /* TEST */
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        opacity: 1;
+    font-size: 28px;
     }
-}
+
+    .fa-regular {
+        position: relative;
+    }
+
+
+
+    .hidden {
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0;
+        opacity: 0;
+        
+        &:hover{
+            @include heart-animation;
+            opacity: 1;
+            background: linear-gradient(360deg, $primary-color, $secondary-color);
+            color: transparent;
+            background-clip: text;
+            animation-name: heart;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            transition-timing-function: linear;
+        }
+    }
+
 
 /* --------------------------Footer-------------------------- */ 
 
 footer {
     background-color: rgb(51, 51, 51);
-    color: white;
     padding: 20px;
 
     img {
@@ -241,6 +257,7 @@ footer {
 
 .foot__body {
     display: flex;
+    color: white;
 
     p {
         margin: 0 0 10px 0;

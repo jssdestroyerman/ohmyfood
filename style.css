@@ -387,7 +387,6 @@ a {
   font-weight: normal;
 }
 .explorer__nav:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
   transform: scale(1.03);
 }
 
@@ -500,25 +499,70 @@ main h1 {
 }
 
 .main__card_i {
-  position: relative;
   margin-top: 18px;
   margin-right: 20px;
-  font-size: 25px;
-  z-index: 0;
+  font-size: 28px;
 }
-.main__card_i .hidden { /* TEST */
+
+.fa-regular {
+  position: relative;
+}
+
+.hidden {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  left: 0px;
   bottom: 0;
+  opacity: 0;
+}
+.hidden:hover {
   opacity: 1;
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-animation-name: heart;
+          animation-name: heart;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+@-webkit-keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(0.85);
+  }
+  90% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(0.85);
+  }
+  90% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 /* --------------------------Footer-------------------------- */
 footer {
   background-color: rgb(51, 51, 51);
-  color: white;
   padding: 20px;
 }
 footer img {
@@ -529,6 +573,7 @@ footer img {
 
 .foot__body {
   display: flex;
+  color: white;
 }
 .foot__body p {
   margin: 0 0 10px 0;
