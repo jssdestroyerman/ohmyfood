@@ -11,6 +11,12 @@ h1 {
     font-size: 25px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
 /* --------------------------Header-------------------------- */ 
 
 .logo {
@@ -53,6 +59,7 @@ h1 {
     p {
         font-weight: 300;
     }
+
 }
 
 .explorer__nav {
@@ -64,9 +71,15 @@ h1 {
     height: 50px;
     color: white;
     box-shadow: 3px 3px 10px rgb(141, 141, 141);
+    transition: all 500ms;
     p {
         padding-top: 15px;
         font-weight: normal;
+    }
+
+    &:hover {
+        background: linear-gradient( $primary-color, $secondary-color);
+        transform: scale(1.03);
     }
 }
 
@@ -80,6 +93,7 @@ h1 {
     h1 {
         margin-top: 40px;
     }
+    
 }
 
 .list__block {
@@ -116,7 +130,17 @@ h1 {
 
     p {
         font-weight: bold;
+        color: black;
     }
+
+    &:hover {
+        background-color: rgba($primary-color, .15);
+
+        i{
+            color: $primary-color;
+        }
+    }
+
 }
 
 
@@ -133,6 +157,7 @@ main {
 }
 
 .main__card {
+    position: relative;
     margin: auto;
     width: 90%;
     background-color: white;
@@ -146,6 +171,22 @@ main {
         border-top-right-radius: 20px;
         object-fit: cover;
     }
+
+    .topright_new {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background-color: rgb(125, 230, 195);
+        border-radius: 3px;
+
+        p {
+            margin: 0;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: rgb(40, 73, 63);
+        }
+    }
+
 }
 
 .main__card_body {
@@ -167,9 +208,21 @@ main {
 }
 
 .main__card_i {
+    position: relative;
     margin-top: 18px;
     margin-right: 20px;
     font-size: 25px;
+    z-index: 0;
+
+
+    .hidden { /* TEST */
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+    }
 }
 
 /* --------------------------Footer-------------------------- */ 

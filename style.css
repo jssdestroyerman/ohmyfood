@@ -326,6 +326,11 @@ h1 {
   font-size: 25px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* --------------------------Header-------------------------- */
 .logo {
   position: relative;
@@ -375,10 +380,15 @@ h1 {
   height: 50px;
   color: white;
   box-shadow: 3px 3px 10px rgb(141, 141, 141);
+  transition: all 500ms;
 }
 .explorer__nav p {
   padding-top: 15px;
   font-weight: normal;
+}
+.explorer__nav:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transform: scale(1.03);
 }
 
 /* --------------------------List-------------------------- */
@@ -423,6 +433,13 @@ h1 {
 }
 .list__block p {
   font-weight: bold;
+  color: black;
+}
+.list__block:hover {
+  background-color: rgba(147, 86, 220, 0.15);
+}
+.list__block:hover i {
+  color: #9356DC;
 }
 
 /* --------------------------Main--------------------------  */
@@ -436,6 +453,7 @@ main h1 {
 }
 
 .main__card {
+  position: relative;
   margin: auto;
   width: 90%;
   background-color: white;
@@ -450,6 +468,19 @@ main h1 {
   border-top-right-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main__card .topright_new {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: rgb(125, 230, 195);
+  border-radius: 3px;
+}
+.main__card .topright_new p {
+  margin: 0;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: rgb(40, 73, 63);
 }
 
 .main__card_body {
@@ -469,9 +500,19 @@ main h1 {
 }
 
 .main__card_i {
+  position: relative;
   margin-top: 18px;
   margin-right: 20px;
   font-size: 25px;
+  z-index: 0;
+}
+.main__card_i .hidden { /* TEST */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
 }
 
 /* --------------------------Footer-------------------------- */
