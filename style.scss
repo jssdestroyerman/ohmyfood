@@ -129,7 +129,7 @@ a {
     }
 
     p {
-        font-weight: bold;
+        font-weight: 500;
         color: black;
     }
 
@@ -197,6 +197,7 @@ main {
         font-size: 18px;
         padding-left: 12px;
         line-height: 1;
+        font-weight: 500;
     }
 
     p {
@@ -270,6 +271,10 @@ footer {
 
     i:nth-child(1) {
         width: 20px;
+    }
+    
+    &:hover {
+        color: rgb(194, 194, 194);
     }
 }
 

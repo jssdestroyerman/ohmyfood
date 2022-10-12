@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -318,6 +318,7 @@ template {
 
     font-family: 'Shrikhand', cursive;
 */
+/* mixins for all menu pages */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -431,7 +432,7 @@ a {
   font-size: 20px;
 }
 .list__block p {
-  font-weight: bold;
+  font-weight: 500;
   color: black;
 }
 .list__block:hover {
@@ -490,6 +491,7 @@ main h1 {
   font-size: 18px;
   padding-left: 12px;
   line-height: 1;
+  font-weight: 500;
 }
 .main__card_body p {
   font-weight: 300;
@@ -584,4 +586,7 @@ footer img {
 }
 .foot__body i:nth-child(1) {
   width: 20px;
+}
+.foot__body:hover {
+  color: rgb(194, 194, 194);
 }/*# sourceMappingURL=style.css.map */

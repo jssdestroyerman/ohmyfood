@@ -17,3 +17,180 @@
         }
     }
 }
+
+
+/* mixins for all menu pages */ 
+
+@mixin header__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 180px;
+        margin: 18px 0 12px 0;
+    }
+
+    i {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+    }
+}
+
+@mixin header__image {
+    img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@mixin main {
+    background-color: $grey;
+    position: relative;
+    bottom: 50px;
+    padding: 4%;
+    padding-top: 30px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-bottom: -50px;
+}
+
+@mixin main__header {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    p {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .fa-regular {
+        position: relative;
+        margin-right: 20px;
+        font-size: 25px;
+    }
+
+    .hidden {
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0;
+        opacity: 0;
+        
+        &:hover{
+            @include heart-animation;
+            opacity: 1;
+            background: linear-gradient(360deg, $primary-color, $secondary-color);
+            color: transparent;
+            background-clip: text;
+            animation-name: heart;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            transition-timing-function: linear;
+        }
+    }
+}
+
+@mixin title {
+    h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    span {
+        display: block;
+        margin-top: 4px;
+        width: 40px;
+        height: 3px;
+        background-color: $third-color;
+    }
+}
+
+@mixin card {
+    position: relative;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgb(209, 209, 209);
+    border-radius: 15px;
+    padding: 12px;
+    margin-bottom: 15px;
+    h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 5px;
+        font-weight: 300;
+    }
+
+    .price {
+        position: absolute;
+        right: 25px;
+        bottom: 12px;
+        font-weight: 500;
+    }
+}
+
+@mixin order {
+    background: linear-gradient( $secondary-color, $primary-color);
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 60%;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    box-shadow: 3px 3px 10px rgb(141, 141, 141);
+    transition: all 500ms;
+    p {
+        padding-top: 15px;
+        font-weight: normal;
+    }
+
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+
+@mixin footer {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    
+    img {
+        filter: invert(1);
+        width: 100px;
+        margin: 5px 0 20px 0;
+    }
+    
+    .foot__body {
+        display: flex;
+        color: white;
+    
+        p {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+        }
+    
+        i {
+            margin-right: 14px;
+        }
+    
+        i:nth-child(1) {
+            width: 20px;
+        }
+
+        &:hover {
+            color: rgb(194, 194, 194);
+        }
+    }
+}
