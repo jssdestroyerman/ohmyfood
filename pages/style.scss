@@ -1,0 +1,245 @@
+@import "../sass/normalize";
+@import "../sass/font";
+@import "../sass/variables";
+@import "../sass/mixins";
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
+        width: 180px;
+        margin: 18px 0 12px 0;
+    }
+
+    i {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+    }
+}
+
+.header__image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+main {
+    background-color: $grey;
+    position: relative;
+    bottom: 50px;
+    padding: 4%;
+    padding-top: 30px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-bottom: -50px;
+}
+
+.main__header {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    p {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .fa-regular {
+        position: relative;
+        margin-right: 20px;
+        font-size: 25px;
+    }
+
+    .hidden {
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0;
+        opacity: 0;
+        
+        &:hover{
+            @include heart-animation;
+            opacity: 1;
+            background: linear-gradient(360deg, $primary-color, $secondary-color);
+            color: transparent;
+            background-clip: text;
+            animation-name: heart;
+            animation-duration: 300ms;
+            transition-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.title {
+    h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    span {
+        display: block;
+        margin-top: 4px;
+        width: 40px;
+        height: 3px;
+        background-color: $third-color;
+    }
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgb(209, 209, 209);
+    border-radius: 15px;
+    padding: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    
+    &:hover {
+        span {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        span i {
+            transform: rotate(360deg);
+        }
+
+        .price {
+            transform: translateX(-50px);
+        }
+
+    }
+
+
+    
+
+    h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+    .price {
+        position: absolute;
+        right: 25px;
+        bottom: 12px;
+        font-weight: 500;
+        transition: 500ms;
+        background-color: rgb(255, 255, 255);
+        padding-left: 5px;
+    }
+
+    span {
+        position: absolute;
+        background-color: $third-color;
+        width: 60px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        opacity: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: all;
+        transition-duration: 500ms;
+        
+        i {
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            margin: 40%;
+            transition: 500ms;
+            transition-delay: 100ms;
+        }
+    }
+}
+
+.order {
+    background: linear-gradient( $secondary-color, $primary-color);
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 60%;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    box-shadow: 3px 3px 10px rgb(141, 141, 141);
+    transition: all 500ms;
+    p {
+        padding-top: 15px;
+        font-weight: normal;
+    }
+
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+
+footer {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    
+    img {
+        filter: invert(1);
+        width: 100px;
+        margin: 5px 0 20px 0;
+    }
+    
+    .foot__body {
+        display: flex;
+        color: white;
+    
+        p {
+            margin: 0 0 10px 0;
+            font-size: 15px;
+        }
+    
+        i {
+            margin-right: 14px;
+        }
+    
+        i:nth-child(1) {
+            width: 20px;
+        }
+
+        &:hover {
+            color: rgb(194, 194, 194);
+        }
+    }
+}
