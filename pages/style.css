@@ -318,7 +318,6 @@ template {
 
     font-family: 'Shrikhand', cursive;
 */
-/* mixins for all menu pages */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -332,7 +331,6 @@ a {
   color: black;
 }
 
-/* Header */
 .header__logo {
   position: relative;
   display: flex;
@@ -352,6 +350,8 @@ a {
 .header__image img {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main {
@@ -455,6 +455,17 @@ main {
   padding: 12px;
   margin-bottom: 15px;
   overflow: hidden;
+  cursor: pointer;
+}
+.card:hover span {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.card:hover span i {
+  transform: rotate(360deg);
+}
+.card:hover .price {
+  transform: translateX(-50px);
 }
 .card h2 {
   font-size: 18px;
@@ -472,17 +483,24 @@ main {
   right: 25px;
   bottom: 12px;
   font-weight: 500;
+  transition: 500ms;
+  background-color: rgb(255, 255, 255);
+  padding-left: 5px;
 }
 .card span {
   position: absolute;
   background-color: #99E2D0;
-  width: 17%;
+  width: 60px;
   height: 100%;
   right: 0;
   top: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   opacity: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all;
+  transition-duration: 500ms;
 }
 .card span i {
   display: flex;
@@ -490,6 +508,8 @@ main {
   color: white;
   font-size: 22px;
   margin: 40%;
+  transition: 500ms;
+  transition-delay: 100ms;
 }
 
 .order {
