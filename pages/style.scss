@@ -18,6 +18,16 @@ a {
     color: black;
 }
 
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
 .header__logo {
     position: relative;
     display: flex;
@@ -80,7 +90,7 @@ main {
         opacity: 0;
         
         &:hover{
-            @include heart-animation;
+            @include heart-animation; /* animation of hearts */ 
             opacity: 1;
             background: linear-gradient(360deg, $primary-color, $secondary-color);
             color: transparent;
@@ -110,6 +120,8 @@ main {
     }
 }
 
+
+
 .card {
     position: relative;
     background-color: white;
@@ -119,7 +131,14 @@ main {
     margin-bottom: 15px;
     overflow: hidden;
     cursor: pointer;
-    
+
+    @include card__loading; /* animation of cards */ 
+    animation-name: card__loading;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+
     &:hover {
         span {
             opacity: 1;
@@ -134,10 +153,7 @@ main {
             transform: translateX(-50px);
         }
 
-    }
-
-
-    
+    } 
 
     h2 {
         font-size: 18px;
@@ -188,6 +204,8 @@ main {
         }
     }
 }
+
+@include animation-card-delay; /* animation of cards */ 
 
 .order {
     background: linear-gradient( $secondary-color, $primary-color);
