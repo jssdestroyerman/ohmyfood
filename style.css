@@ -356,6 +356,7 @@ bodY {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  overflow-y: hidden;
 }
 
 .wave {
@@ -442,18 +443,18 @@ bodY {
 }
 @-webkit-keyframes closed {
   0% {
-    transform: scale(1);
+    transform: translateY(0px);
   }
   100% {
-    transform: scaleY(0);
+    transform: translateY(-1000px);
   }
 }
 @keyframes closed {
   0% {
-    transform: scale(1);
+    transform: translateY(0px);
   }
   100% {
-    transform: scaleY(0);
+    transform: translateY(-1000px);
   }
 }
 /* --------------------------Header-------------------------- */
