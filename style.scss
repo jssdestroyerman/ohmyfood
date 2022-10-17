@@ -19,7 +19,7 @@ a {
 /* --------------------------Loader spinner-------------------------- */
 
 
-@include loader-spinner;      
+@include loader-spinner;
 
 
 /* --------------------------Header-------------------------- */ 
@@ -320,5 +320,16 @@ footer {
     .all__box {
         flex-wrap: nowrap;
     }
+
+    .list__info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .list__block {
+        width: 25%;
+        margin: 0 30px;
+    }
+    
 }
     
