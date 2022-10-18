@@ -318,6 +318,10 @@ template {
 
     font-family: 'Shrikhand', cursive;
 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -533,6 +537,7 @@ bodY {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: default;
   background-color: rgb(245, 245, 245);
   border-radius: 15px;
   margin: 30px 0 20px 10px;
